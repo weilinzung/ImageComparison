@@ -1,4 +1,4 @@
-// imageComparison 1.1.0
+// imageComparison 1.2.0
 // Author: M.Ulyanov
 // Created: 09/03/2016
 // Example: - http://m-ulyanov.github.io/image-comparison/
@@ -16,7 +16,7 @@
 
 
     /**
-     *
+     * Constructor
      * @param options
      */
      var ImageComparison = function (options) {
@@ -44,7 +44,7 @@
 
 
     /**
-     *
+     * Build HTML structure
      * @private
      */
     ImageComparison.prototype._build = function() {
@@ -79,25 +79,25 @@
 
 
     /**
-     *
+     * Set need DOM events
      * @private
      */
     ImageComparison.prototype._setEvents = function() {
         var comparison = this;
 
-        comparison._comparisonSeparator.addEventListener('mousedown', function() {
-            comparison._comparisonSeparator.classList.add('actived');
-        });
-
         comparison.container.addEventListener('click', function(event) {
             comparison._calcPosition(event);
         });
 
-        document.body.addEventListener('mouseup', function() {
+        utils.setMultiEvents(comparison._comparisonSeparator, ['mousedown', 'touchstart'], function() {
+            comparison._comparisonSeparator.classList.add('actived');
+        });
+
+        utils.setMultiEvents(document.body, ['mouseup', 'touchend'], function() {
             comparison._comparisonSeparator.classList.remove('actived');
         });
 
-        document.body.addEventListener('mousemove', function(event) {
+        utils.setMultiEvents(document.body, ['mousemove', 'touchmove'], function() {
             if(comparison._comparisonSeparator.classList.contains('actived')) {
                 comparison._calcPosition(event);
                 if (document.selection) {
@@ -106,15 +106,9 @@
             }
         });
 
-        window.addEventListener('resize', function() {
+        utils.setMultiEvents(window, ['resize', 'load'], function() {
             comparison._setImageSize();
         });
-
-
-        window.addEventListener('load', function() {
-            comparison._setImageSize();
-        })
-
 
         for(var i = 0; i < comparison.images.length; i++) {
             comparison.images[i].addEventListener('dragstart', function (e) {
@@ -133,7 +127,7 @@
     ImageComparison.prototype._calcPosition = function(event) {
         var containerCoords = this.container.getBoundingClientRect();
         var containerWidth = containerCoords.width;
-        var horizontalPositionForElement = event.clientX - containerCoords.left;
+        var horizontalPositionForElement = (event.clientX || event.touches[0].pageX) - containerCoords.left;
         var positionInPercent = horizontalPositionForElement * 100 / containerWidth;
         if(positionInPercent > 100) {
             positionInPercent = 100;
@@ -240,7 +234,6 @@
      */
     var utils = {
 
-
         /**
          *
          * @param target
@@ -280,6 +273,19 @@
             }
 
             return target;
+        },
+
+
+        /**
+         *
+         * @param element
+         * @param events
+         * @param func
+         */
+        setMultiEvents: function(element, events, func) {
+            for(var i = 0; i < events.length; i++) {
+                element.addEventListener(events[i], func);
+            }
         },
 
 
