@@ -1,4 +1,4 @@
-// imageComparison 1.0.0
+// imageComparison 1.1.0
 // Author: M.Ulyanov
 // Created: 09/03/2016
 // Example: - http://m-ulyanov.github.io/image-comparison/
@@ -74,6 +74,7 @@
             this._items.push(item);
             this.container.appendChild(item);
         }
+
     };
 
 
@@ -104,6 +105,15 @@
                 }
             }
         });
+
+        window.addEventListener('resize', function() {
+            comparison._setImageSize();
+        });
+
+
+        window.addEventListener('load', function() {
+            comparison._setImageSize();
+        })
 
 
         for(var i = 0; i < comparison.images.length; i++) {
@@ -211,6 +221,15 @@
      */
     ImageComparison.prototype._updatePosition = function(percent) {
         this._items[0].style.width = percent + '%';
+    };
+
+
+    /**
+     *
+     * @private
+     */
+    ImageComparison.prototype._setImageSize = function() {
+        this.images[0].style.width = this.container.offsetWidth + 'px';
     };
 
 
