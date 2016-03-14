@@ -45,7 +45,7 @@ Options list:
     </tr>
    <tr>
       <td>data</td>
-      <td>Array of objects, where each object: `{ image: dom element, label: 'before'}`</td>
+      <td>Array of objects, where each object: { image: dom element, label: 'before'}</td>
     </tr>
 </table>
 
