@@ -26,7 +26,6 @@ Slider to quickly compare two images
    });
 </script>
 ```
-4. Using!
 
 ##Options
 Options list:
