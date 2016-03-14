@@ -5,8 +5,8 @@ Slider to quickly compare two images
 
 ##Getting started
 1. `npm install image-comparison` or download ZIP arhive
-2. Include ImageComparison.js and ImageComparison.css
-1.1 IE9 required file classList.js
+2. Include ImageComparison.js and ImageComparison.css<br>
+2.1 IE9 required file classList.js
 3. Call ImageComparison with your options:
 ```html
 <script>
