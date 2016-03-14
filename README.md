@@ -11,7 +11,7 @@ Slider to quickly compare two images
 ```html
 <script>
    new ImageComparison({
-      container: containerSelector,
+      container: container element,
       startPosition: 70,
       data: [
         {
