@@ -10,7 +10,7 @@ Slider to quickly compare two images
 3. Call ImageComparison with your options:
 ```html
 <script>
-   new ImageComparison({
+   new ImageComparison({ 
       container: containerSelector,
       startPosition: 70,
       data: [
