@@ -1,6 +1,6 @@
 /*
  * imageComparison: Slider to quickly compare two images.
- * 1.1.1
+ * 1.1.2
  *
  * By Max Ulyanov
  * Src: https://github.com/M-Ulyanov/ImageComparison/
@@ -101,7 +101,7 @@
             comparison._comparisonSeparator.classList.remove('actived');
         });
 
-        utils.setMultiEvents(document.body, ['mousemove', 'touchmove'], function () {
+        utils.setMultiEvents(document.body, ['mousemove', 'touchmove'], function (event) {
             if (comparison._comparisonSeparator.classList.contains('actived')) {
                 comparison._calcPosition(event);
                 if (document.selection) {
