@@ -9,8 +9,6 @@
 
 
 
-'use strict';
-
 const defaultOptions = {
     container: null,
     startPosition: 50,
