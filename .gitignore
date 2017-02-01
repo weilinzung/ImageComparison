@@ -1,5 +1,8 @@
 # Created by .ignore support plugin (hsz.mobi)
 
+npm-debug.log
 
 /.idea
-npm-debug.log
+*.less
+src/images
+index.html

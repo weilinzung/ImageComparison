@@ -4,12 +4,13 @@ Slider to quickly compare two images
 
 
 ##Getting started
-1. `npm install image-comparison` or download ZIP arhive
-2. Include ImageComparison.js and ImageComparison.css<br>
-2.1 IE9 required file classList.js
+1. `npm install image-comparison --save`
+2. Include style `node_modules/image-comparison/src/ImageComparison.css`
 3. Call ImageComparison with your options:
 ```html
 <script>
+   import { ImageComparison } from './ImageComparison';
+
    new ImageComparison({ 
       container: containerSelector,
       startPosition: 70,
@@ -26,7 +27,8 @@ Slider to quickly compare two images
    });
 </script>
 ```
-4. Using!
+4. For support UMD use - `https://babeljs.io/docs/plugins/transform-es2015-modules-umd/`
+5. Using!
 
 ##Options
 Options list:
@@ -51,7 +53,7 @@ Options list:
 
 
 ##Browsers support
-Chrome, FF, Opera, Safari, IE9+
+Chrome, FF, Opera, Safari, IE10+
 
 ##Example
 See example - <a href="https://m-ulyanov.github.io/image-comparison/">ImageComparison</a>

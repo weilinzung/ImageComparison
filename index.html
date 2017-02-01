@@ -4,9 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <title>Slider to quickly compare two images</title>
-  <link rel="stylesheet" href="src/css/ImageComparison.css">
-  <script src="src/js/classList.js"></script>
-  <script src="src/js/ImageComparison.js"></script>
+  <link rel="stylesheet" href="src/ImageComparison.css">
+  <script src="src/ImageComparison.js"></script>
   <style>
     * {
       padding: 0;
@@ -71,7 +70,7 @@
       for (var i = 0; i < imageComparisonCollection.length; i++) {
         var imageWidget = imageComparisonCollection[i];
         var images = imageWidget.querySelectorAll('.comparison-image');
-        new ImageComparison({
+        new returnExports.ImageComparison({
           container: imageWidget,
           startPosition: imageWidget.getAttribute('start-position'),
           data: [
