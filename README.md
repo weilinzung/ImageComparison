@@ -20,7 +20,7 @@ import ImageComparison from 'ImageComparison';
 ```
 #### Simple Path
 ```html
-<script src="path/ImageComparison.js"></script>
+<script src="yourpath/ImageComparison.js"></script>
 ```
 
 ### CSS
