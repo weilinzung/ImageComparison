@@ -3,23 +3,33 @@ ImageComparison
 Slider to quickly compare two images
 
 
-
 ## Install
 ```bash
 $ npm install image-comparison
 ```
 
-## Usage
-Once you have downloaded ImageComparison, the first thing you need to do is include the CSS and the JavaScript.
+## Connection
+### JavaScript
+#### commonJS
+```js
+var ImageComparison = require('ImageComparison');
+```
+#### ES6
+```js
+import ImageComparison from 'ImageComparison';
+```
+#### Simple Path
+```html
+<script src="path/ImageComparison.js"></script>
+```
 
 ### CSS
 ```html
-<link rel="stylesheet" href="path/ImageComparison.css">
+<link rel="stylesheet" href="yourpath/ImageComparison.css">
 ```
 
-### JavaScript
+## Usage
 ```html
-<script src="path/ImageComparison.js"></script>
 <script>
 new ImageComparison({ 
   container: containerSelector,
@@ -38,18 +48,7 @@ new ImageComparison({
 </script>
 ```
 
-### commonJS
-```js
-  var ImageComparison = require('ImageComparison');
-```
-
-### ES6
-```js
-  import ImageComparison from 'ImageComparison';
-```
-
-
-##Options
+## Options
 Options list:
 <table>
     <tr>
@@ -71,8 +70,8 @@ Options list:
 </table>
 
 
-##Browsers support
+## Browsers support
 Chrome, FF, Opera, Safari, IE10+
 
-##Example
+## Example
 See example - <a href="https://m-ulyanov.github.io/image-comparison/">ImageComparison</a>
