@@ -1,7 +1,8 @@
 ImageComparison
+[![npm](https://img.shields.io/npm/dt/image-comparison.svg)](https://www.npmjs.com/package/image-comparison)
+[![npm](https://img.shields.io/npm/v/image-comparison.svg)](https://www.npmjs.com/package/image-comparison)
 ===============
 Slider to quickly compare two images
-
 
 ## Install
 ```bash
