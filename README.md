@@ -21,11 +21,6 @@ require(['ImageComparison'], function (ImageComparison) {
    // Usage
 });
 ```
-#### Window
-```html
-<script src="node_modules/image-comparison/src/ImageComparison.js"></script>
-```
-
 ### CSS
 ```html
 <link rel="stylesheet" href="node_modules/image-comparison/src/ImageComparison.css">
