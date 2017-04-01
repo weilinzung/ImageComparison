@@ -2,7 +2,7 @@
   "name": "image-comparison",
   "version": "2.0.3",
   "description": "Slider to quickly compare two images",
-  "main": "src/ImageComparison.js",
+  "main": "./src/ImageComparison.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

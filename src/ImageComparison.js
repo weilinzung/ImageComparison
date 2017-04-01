@@ -1,15 +1,12 @@
 /*
- * imageComparison: Slider to quickly compare two images.
- * 2.0.2
+ * ImageComparison: Slider to quickly compare two images.
  *
  * By Max Ulyanov
  * Src: https://github.com/M-Ulyanov/ImageComparison/
  * Example https://m-ulyanov.github.io/image-comparison/
  */
 
-
-(function(global){
-
+(function(root){
 
     const defaultOptions = {
         container: null,
@@ -303,17 +300,16 @@
     };
 
 
-    // Exports to multiple environments
-    if(typeof define === 'function' && define.amd){ //AMD
-        define(function () { return ImageComparison; });
-    } else if (typeof module !== 'undefined' && module.exports){ //node
-        module.exports = ImageComparison;
-    } else { // browser
-        // use string because of Google closure compiler ADVANCED_MODE
-        /* jslint sub:true */
-        global['ImageComparison'] = ImageComparison;
+    if (typeof define === 'function' && define.amd) {
+        define('ImageComparison', [], function () {
+            return ImageComparison;
+        });
+    }
+    else {
+        root.ImageComparison = ImageComparison;
     }
 
 
 }(this));
+
 
