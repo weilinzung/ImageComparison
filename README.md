@@ -11,22 +11,19 @@ $ npm install image-comparison
 
 ## Connection
 ### JavaScript
-#### commonJS
+#### CommonJS
 ```js
-var ImageComparison = require('ImageComparison');
+import { ImageComparison } from 'image-comparison';
 ```
-#### ES6
+#### AMD
 ```js
-import ImageComparison from 'ImageComparison';
+require(['ImageComparison'], function (ImageComparison) {
+   // Usage
+});
 ```
-#### Simple Path
-```html
-<script src="yourpath/ImageComparison.js"></script>
-```
-
 ### CSS
 ```html
-<link rel="stylesheet" href="yourpath/ImageComparison.css">
+<link rel="stylesheet" href="node_modules/image-comparison/src/ImageComparison.css">
 ```
 
 ## Usage
