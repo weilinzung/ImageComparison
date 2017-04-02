@@ -6,7 +6,7 @@ Slider to quickly compare two images
 
 ## Install
 ```bash
-$ npm install image-comparison
+$ npm install image-comparison --save
 ```
 
 ## Connection
