@@ -5,7 +5,11 @@
     "Wei <weilinzung@gmail.com>"
   ],
   "description": "",
-  "main": "",
+  "main": [
+    "src/ImageComparison.scss",
+    "src/ImageComparison.css",
+    "src/ImageComparison.js"
+  ],
   "license": "MIT",
   "ignore": [
     "**/.*",
