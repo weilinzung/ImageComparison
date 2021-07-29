@@ -8,7 +8,7 @@
 
 (function(root){
 
-    const defaultOptions = {
+    var defaultOptions = {
         container: null,
         startPosition: 50,
         data: null
