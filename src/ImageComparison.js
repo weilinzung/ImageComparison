@@ -8,6 +8,7 @@
 
 (function(root){
 
+    // For non-es JS compiler
     var defaultOptions = {
         container: null,
         startPosition: 50,

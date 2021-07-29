@@ -1,0 +1,17 @@
+{
+  "name": "image-comparison-bower",
+  "homepage": "https://github.com/weilinzung/image-comparison-bower",
+  "authors": [
+    "Wei <weilinzung@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
